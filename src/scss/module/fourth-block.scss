@@ -1,7 +1,10 @@
 @import "../colors";
 
 .fourth-block {
-  margin-bottom: 200px;
+  padding-bottom: 200px;
+  @media screen and (max-width: 639px) {
+    padding-bottom: 7.5rem;
+  }
   // .fourth-block__title
   &__title {
     max-width: 806px;
@@ -10,6 +13,13 @@
     opacity: 0;
     transform: translateX(-100%);
     transition-duration: 1s;
+    @media screen and (max-width: 639px) {
+      max-width: none;
+      margin-bottom: 9.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+    }
 
     &.anim {
       transform: translateX(0);
@@ -29,6 +39,12 @@
       font-size: 20px;
       line-height: 130%;
       text-transform: none;
+      @media screen and (max-width: 639px) {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        max-width: none;
+      }
     }
   }
 
@@ -39,6 +55,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     position: relative;
+
+    @media screen and (max-width: 639px) {
+      display: flex;
+    }
   }
 
   // .fourth-block__element
@@ -132,6 +152,9 @@
     transition-delay: 2s;
     opacity: 0;
     transform: translateX(100%);
+    @media screen and (max-width: 639px) {
+      display: none;
+    }
 
     &.anim {
       transform: translateX(0);

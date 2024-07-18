@@ -2,19 +2,31 @@
 
 .three-block {
   // .three-block__row
-  margin-bottom: 200px;
+  padding-bottom: 200px;
+
+  @media screen and (max-width: 639px) {
+    padding-bottom: 7.5rem;
+  }
 
   &__row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
+    @media screen and (max-width: 639px) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
   }
 
   // .three-block__image
   &__image {
     flex: 1 1 45%;
     transform: translateX(-27px);
+    @media screen and (max-width: 639px) {
+      flex: auto;
+      transform: translateX(0);
+    }
 
     img {
       width: 100%;
@@ -24,6 +36,9 @@
   // .three-block__description
   &__description {
     flex: 1 1 55%;
+    @media screen and (max-width: 639px) {
+      flex: auto;
+    }
   }
 
   // .three-block__title
@@ -35,6 +50,12 @@
     opacity: 0;
     transition-duration: 1s;
     transition-delay: .5s;
+
+    @media screen and (max-width: 639px) {
+      font-size: 1.75rem;
+      margin-bottom: 2.75rem;
+    }
+
 
     &.anim {
       transform: translateX(0);
@@ -48,6 +69,10 @@
     width: 100%;
     margin-bottom: 48px;
 
+    @media screen and (max-width: 639px) {
+      margin-bottom: 2.5rem;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -56,6 +81,9 @@
       background-color: #D0D0D0;
       left: 50%;
       transform: translateX(-50%);
+      @media screen and (max-width: 639px) {
+        display: none;
+      }
     }
   }
 
@@ -69,6 +97,14 @@
     opacity: 0;
     transition-duration: .3s;
     transform: translatey(100%);
+    @media screen and (max-width: 639px) {
+      padding: 1rem 0;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 1.25rem;
+      gap: .75rem;
+    }
+
 
     &.anim {
       opacity: 1;
@@ -106,11 +142,15 @@
       &:last-child {
         margin-left: 16px;
         font-weight: 600;
+        @media screen and (max-width: 639px) {
+          margin-left: 0;
+        }
       }
 
       span {
         position: relative;
         margin-right: 12px;
+
 
         &::before {
           content: '';
