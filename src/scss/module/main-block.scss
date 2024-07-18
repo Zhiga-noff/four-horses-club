@@ -61,29 +61,6 @@
     display: flex;
     gap: 16px;
 
-    .button-lg {
-      text-align: center;
-      padding: 16px 45px;
-      border-radius: 66px;
-      flex: 1 1 50%;
-      font-size: 16px;
 
-      transition-duration: .3s;
-      background-color: $black-btn;
-      border: 2px solid $black-btn;
-      color: white;
-      font-weight: 500;
-
-      &.stroke {
-        background-color: inherit;
-        color: $black-btn;
-      }
-
-      &:hover {
-        background-color: $yellow;
-        border: 2px solid $yellow;
-        color: $black-btn;
-      }
-    }
   }
 }

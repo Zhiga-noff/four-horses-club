@@ -14,8 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "gulp-cli": "^2.3.0",
-    "prettier": "^3.0.3",
-    "swiper": "^11.1.5"
+    "prettier": "^3.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.24.9",
