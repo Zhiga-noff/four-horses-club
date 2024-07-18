@@ -1,0 +1,31 @@
+@import "../colors";
+
+.second-block {
+  padding-top: 80px;
+  padding-bottom: 36px;
+  // .second-block__row
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+  }
+
+  // .second-block__title
+  &__title {
+    max-width: 764px;
+    font-size: 36px !important;
+    line-height: 135%;
+
+  }
+
+  // .second-block__image
+  &__image {
+    flex: 0 0 394px;
+
+
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@import "../colors";
+
+.three-block {
+  // .three-block__row
+  margin-bottom: 200px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  // .three-block__image
+  &__image {
+    flex: 1 1 45%;
+    transform: translateX(-27px);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // .three-block__description
+  &__description {
+    flex: 1 1 55%;
+  }
+
+  // .three-block__title
+  &__title {
+    font-size: 36px;
+    line-height: 135%;
+    margin-bottom: 60px;
+  }
+
+  // .three-block__table
+  &__table {
+    position: relative;
+    width: 100%;
+    margin-bottom: 48px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background-color: #D0D0D0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  // .three-block__row
+  &__row {
+    padding: 16px 0;
+    border-bottom: 2px solid #D0D0D0;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    td {
+      text-align: left !important;
+      width: 100%;
+
+      &:last-child {
+        margin-left: 16px;
+        font-weight: 600;
+      }
+
+      span {
+        position: relative;
+        margin-right: 12px;
+
+        &::before {
+          content: '';
+          background-color: $red;
+          width: 95%;
+          height: 2px;
+          position: absolute;
+          top: 50%;
+        }
+      }
+    }
+  }
+
+
+  // .three-block__footnote
+  &__footnote {
+    color: $blue;
+  }
+}
