@@ -16,7 +16,15 @@
     max-width: 764px;
     font-size: 36px !important;
     line-height: 135%;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition-duration: 1s;
+    transition-delay: 1.3s;
 
+    &.anim {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   // .second-block__image

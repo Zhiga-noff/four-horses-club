@@ -5,6 +5,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition-duration: 1s;
+
+    &.anim {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__buttons {
@@ -12,7 +20,7 @@
     align-items: center;
     gap: 14px;
 
-    .active-index {
+    .swiper-pagination-current {
       opacity: 1;
     }
 
@@ -36,7 +44,14 @@
 
   // .fifth-block__slider
   &__slider {
-    overflow-x: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+    transition-duration: 1s;
+
+    &.anim {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   // .fifth-block__element
