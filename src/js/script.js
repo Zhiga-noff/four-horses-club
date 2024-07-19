@@ -19,17 +19,18 @@ swiperBtns.addEventListener('click', () => {
 })
 
 const tableForthBlock = document.querySelector('.fourth-block__table')
+const tabletContainer = tableForthBlock.querySelector('.fourth-block__table-container')
 const elementsSliderTable = tableForthBlock.querySelectorAll('.fourth-block__element')
 
 if (window.innerWidth <= 992) {
     tableForthBlock.classList.add('swiper')
+    tabletContainer.classList.add('swiper-wrapper')
     elementsSliderTable.forEach(item => {
         item.classList.add('swiper-slide')
     })
-    tableForthBlock.innerHTML = ``
     // console.log(swiperConfig.slidesPerView)
     // swiperConfig.params.slidesPerView = 1
-    // swiperTable = new Swiper('.fourth-block__table', {})
+    swiperTable = new Swiper('.fourth-block__table', {})
 }
 
 window.addEventListener('resize', () => {
