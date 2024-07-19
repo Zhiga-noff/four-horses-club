@@ -5,7 +5,7 @@ export const sizeWindowControl = (swiper) => {
   const tabletContainer = tableForthBlock.querySelector('.fourth-block__table-container');
   const elementsSliderTable = tableForthBlock.querySelectorAll('.fourth-block__element');
 
-  if (window.innerWidth <= 992) {
+  if (window.innerWidth <= 639) {
     if (tableForthBlock.classList.contains('swiper')) {
       return;
     }

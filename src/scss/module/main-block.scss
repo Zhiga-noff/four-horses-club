@@ -8,17 +8,27 @@
   background-position: center;
   background-repeat: no-repeat;
 
+  @media screen and (max-width: 992px) {
+    padding-top: 1.3rem;
+    padding-bottom: 6.5rem;
+  }
+
   @media screen and (max-width: 639px) {
     padding-top: 1.125rem;
     padding-bottom: 18.125rem;
     background-color: #E9DED4;
     background-image: url("../../img/background-main-mob.png");
+
   }
   // .main-block__row
   &__row {
     display: flex;
     flex-direction: column;
     max-width: 542px;
+
+    @media screen and (max-width: 992px) {
+      max-width: 27.5rem;
+    }
     @media screen and (max-width: 639px) {
       max-width: none;
     }
@@ -28,6 +38,11 @@
   &__logo {
     max-width: 245px;
     margin-bottom: 62px;
+
+    @media screen and (max-width: 992px) {
+      max-width: 12.25rem;
+      margin-bottom: 3rem;
+    }
     @media screen and (max-width: 639px) {
       max-width: 13.25rem;
       margin-bottom: 2.5rem;
@@ -55,6 +70,11 @@
     transition-duration: 1s;
     transform: translateX(-100%);
     opacity: 0;
+
+    @media screen and (max-width: 992px) {
+      font-size: 3rem;
+      margin-bottom: 1.25rem;
+    }
 
     @media screen and (max-width: 639px) {
       font-size: 2.25rem;
@@ -89,6 +109,10 @@
     transition-delay: .8s;
     opacity: 0;
 
+    @media screen and (max-width: 992px) {
+      margin-bottom: 2rem;
+    }
+
     @media screen and (max-width: 639px) {
       text-align: left;
       margin-bottom: 2rem;
@@ -111,6 +135,10 @@
     transition-duration: 1.2s;
     transition-delay: 1.3s;
     opacity: 0;
+
+    @media screen and (max-width: 992px) {
+      gap: .8rem;
+    }
 
     @media screen and (max-width: 639px) {
       flex-direction: column;

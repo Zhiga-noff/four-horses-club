@@ -12,8 +12,10 @@
     opacity: 0;
     transform: translateY(-100%);
     transition-duration: 1s;
+    margin-bottom: 60px;
 
     @media screen and (max-width: 639px) {
+      margin-bottom: 2.5rem;
       opacity: 1;
       transform: translateY(0);
     }
@@ -36,6 +38,12 @@
         display: flex;
         justify-content: center;
       }
+    }
+
+    .bullet {
+      width: fit-content !important;
+      display: flex;
+      flex-wrap: nowrap;
     }
 
     .bullet-mob {
@@ -65,10 +73,7 @@
 
   // .fifth-block__title
   &__title {
-    margin-bottom: 60px;
-    @media screen and (max-width: 639px) {
-      margin-bottom: 2.5rem;
-    }
+
   }
 
   // .fifth-block__slider

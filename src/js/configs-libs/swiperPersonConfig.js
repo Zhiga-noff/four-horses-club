@@ -25,6 +25,17 @@ export const swiperPersonConfig = {
         nextEl: '.next',
         prevEl: '.prev',
       },
+      slidesPerView: 2,
+      pagination: {
+        el: '.bullet',
+        type: 'fraction',
+      },
+    },
+    992: {
+      navigation: {
+        nextEl: '.next',
+        prevEl: '.prev',
+      },
       slidesPerView: 3,
       pagination: {
         el: '.bullet',

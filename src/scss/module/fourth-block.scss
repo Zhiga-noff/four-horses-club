@@ -66,6 +66,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 
+    @media screen and (max-width: 992px) {
+      gap: 1rem;
+    }
+
 
     @media screen and (max-width: 639px) {
       display: flex !important;
@@ -89,6 +93,11 @@
     font-weight: 500;
     opacity: 0;
     transition-duration: .4s;
+
+    @media screen and (max-width: 992px) {
+      padding: 1rem;
+      font-size: .8rem;
+    }
 
     @media screen and (max-width: 639px) {
       display: flex !important;
@@ -179,6 +188,12 @@
 
       .fourth-block__text {
         max-width: 446px;
+        @media screen and (max-width: 1220px) {
+          max-width: 330px;
+        }
+        @media screen and (max-width: 992px) {
+          max-width: none;
+        }
       }
     }
   }
@@ -201,18 +216,21 @@
     transform: translateX(100%);
     @media screen and (max-width: 639px) {
       z-index: 10;
-      max-width: 21rem;
+      //max-width: 21rem;
+      width: 100%;
       height: fit-content;
-      top: 11.375rem;
-      right: 0;
+      top: 20%;
+      right: auto;
+      left: 50vw;
+
       margin: 0 auto;
 
-      transform: translateX(0);
+      transform: translateX(-50%) !important;
       opacity: 1;
     }
 
     &.hidden-mob {
-      @media screen and (max-width: 639px) {
+      @media screen and (max-width: 992px) {
         display: none;
       }
     }
