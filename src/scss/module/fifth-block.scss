@@ -1,5 +1,9 @@
 .fifth-block {
   margin-bottom: 140px;
+  @media screen and (max-width: 639px) {
+    margin-bottom: 8.75rem;
+  }
+
 
   &__row {
     display: flex;
@@ -8,6 +12,7 @@
     opacity: 0;
     transform: translateY(-100%);
     transition-duration: 1s;
+
 
     &.anim {
       opacity: 1;
@@ -19,6 +24,20 @@
     display: flex;
     align-items: center;
     gap: 14px;
+
+    &.hidden-desk {
+      display: none;
+      @media screen and (max-width: 639px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .bullet-mob {
+      @media screen and (max-width: 639px) {
+        width: auto !important;
+      }
+    }
 
     .swiper-pagination-current {
       opacity: 1;
@@ -36,7 +55,7 @@
       transform: rotate(180deg);
     }
 
-    
+
   }
 
   // .fifth-block__title
@@ -49,6 +68,11 @@
     opacity: 0;
     transform: translateY(100%);
     transition-duration: 1s;
+
+    @media screen and (max-width: 639px) {
+      margin-bottom: 2.5rem;
+    }
+
 
     &.anim {
       opacity: 1;

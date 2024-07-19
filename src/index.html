@@ -207,7 +207,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="fourth-block__row">
+            <div class="fourth-block__row ">
                 <button class="fourth-block__swiper-btn prev-stages">
                     @@include('html/arrow-button.html',{})
                 </button>
@@ -224,7 +224,7 @@
         <div class="container">
             <div class="fifth-block__row anim-items no-anim-again">
                 <h2 class="fifth-block__title title">Участники турнира</h2>
-                <div class="fifth-block__buttons">
+                <div class="fifth-block__buttons hidden-mob">
                     <button class="fifth-block__swiper-btn prev">
                         @@include('html/arrow-button.html',{})
                     </button>
@@ -299,6 +299,16 @@
                         <button class="fifth-block__button button-sm">Подробнее</button>
                     </div>
                 </div>
+            </div>
+
+            <div class="fifth-block__buttons hidden-desk">
+                <button class="fifth-block__swiper-btn prev">
+                    @@include('html/arrow-button.html',{})
+                </button>
+                <p class="bullet-mob"></p>
+                <button class="fifth-block__swiper-btn next">
+                    @@include('html/arrow-button.html',{})
+                </button>
             </div>
         </div>
     </section>

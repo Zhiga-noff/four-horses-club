@@ -1,8 +1,4 @@
 export const swiperPersonConfig = {
-  navigation: {
-    nextEl: '.next',
-    prevEl: '.prev',
-  },
   slidesPerView: 3, // Отображение трех слайдов на одном экране
   loop: true, // Бесконечная прокрутка слайдов
   autoplay: {
@@ -11,9 +7,30 @@ export const swiperPersonConfig = {
   speed: 700, // Скорость пролистывания слайдов в миллисекундах (1 секунда = 1000 миллисекунд)
   spaceBetween: 30, // Промежуток между слайдами в пикселях
   simulateTouch: false,
-  pagination: {
-    el: '.bullet',
-    type: 'fraction',
+
+  breakpoints: {
+    300: {
+      navigation: {
+        nextEl: '.next',
+        prevEl: '.prev',
+      },
+      slidesPerView: 1,
+      pagination: {
+        el: '.bullet-mob',
+        type: 'fraction',
+      },
+    },
+    639: {
+      navigation: {
+        nextEl: '.next',
+        prevEl: '.prev',
+      },
+      slidesPerView: 3,
+      pagination: {
+        el: '.bullet',
+        type: 'fraction',
+      },
+    },
   },
 };
 
