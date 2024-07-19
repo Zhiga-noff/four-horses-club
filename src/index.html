@@ -7,8 +7,6 @@
 <head>
     <!-- Заголовок страницы в браузере -->
     <title>Клуб четырех коней</title>
-    <!-- Подключаем CSS -->
-    <link rel="stylesheet" href="css/style.min.css"/>
     <!-- Добавляем иконку к сайту -->
     <link rel="shortcut icon" href="img/favicon.ico"/>
     <link
@@ -53,8 +51,8 @@
     </section>
 
 
-    <!-- Бегущая строка -->
-    @@include('html/running-line.html',{})
+  <!-- Бегущая строка -->
+  <div class='run-line'></div>
 
     <section class="second-block" id="support">
         <div class="container">
@@ -208,12 +206,12 @@
                 </ul>
             </div>
             <div class="fourth-block__row ">
-                <button class="fourth-block__swiper-btn prev-stages">
-                    @@include('html/arrow-button.html',{})
+                <button class="fourth-block__swiper-btn prev-stages render-button">
+
                 </button>
                 <div class="bullet-stages"></div>
-                <button class="fourth-block__swiper-btn next-stages">
-                    @@include('html/arrow-button.html',{})
+                <button class="fourth-block__swiper-btn next-stages render-button">
+
                 </button>
             </div>
         </div>
@@ -225,12 +223,10 @@
             <div class="fifth-block__row anim-items no-anim-again">
                 <h2 class="fifth-block__title title">Участники турнира</h2>
                 <div class="fifth-block__buttons hidden-mob">
-                    <button class="fifth-block__swiper-btn prev">
-                        @@include('html/arrow-button.html',{})
+                    <button class="fifth-block__swiper-btn prev render-button">
                     </button>
                     <p class="bullet"></p>
-                    <button class="fifth-block__swiper-btn next">
-                        @@include('html/arrow-button.html',{})
+                    <button class="fifth-block__swiper-btn next render-button">
                     </button>
                 </div>
             </div>
@@ -302,19 +298,19 @@
             </div>
 
             <div class="fifth-block__buttons hidden-desk">
-                <button class="fifth-block__swiper-btn prev">
-                    @@include('html/arrow-button.html',{})
+                <button class="fifth-block__swiper-btn prev render-button">
+
                 </button>
                 <p class="bullet-mob"></p>
-                <button class="fifth-block__swiper-btn next">
-                    @@include('html/arrow-button.html',{})
+                <button class="fifth-block__swiper-btn next render-button">
+
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Бегущая строка -->
-    @@include('html/running-line.html',{})
+  <!-- Бегущая строка -->
+  <div class='run-line'></div>
 </main>
 
 <footer>
@@ -329,6 +325,6 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="js/script.js" type="module"></script>
+<script src='js/app.js' type="module"></script>
 </body>
 </html>
