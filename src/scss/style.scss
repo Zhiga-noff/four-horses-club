@@ -110,6 +110,26 @@ body {
   }
 }
 
+.hidden-mob {
+  @media screen and (max-width: 639px) {
+    display: none !important;
+  }
+}
+
+.arrow-btn {
+  circle {
+
+    transition-duration: .3s;
+  }
+
+  &:hover {
+    circle {
+      fill: $yellow;
+    }
+  }
+}
+
+
 footer {
   padding: 40px 0 72px;
   background-color: $beige;

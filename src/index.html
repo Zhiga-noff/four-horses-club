@@ -124,15 +124,32 @@
             >Будущие источники обогащения васюкинцев</span
             >
             </h2>
+            <div class="fourth-block__image anim-items no-anim-again hidden-desk">
+                <img src="img/airplane.png" alt="Самолет"/>
+            </div>
             <div class="fourth-block__table">
                 <ul class="fourth-block__table-container ">
                     <li class="fourth-block__element fourth-block__element_1 anim-items no-anim-again">
-                        <p class="number">1</p>
-                        <p class="fourth-block__text">
+                        <p class="number hidden-mob">1</p>
+                        <p class="fourth-block__text hidden-mob">
                             Строительство железнодорожной магистрали Москва-Васюки
                         </p>
+                        <div class="two-text">
+                            <div class="">
+                                <p class="number ">1</p>
+                                <p class="fourth-block__text ">
+                                    Строительство железнодорожной магистрали Москва-Васюки
+                                </p>
+                            </div>
+                            <div class="">
+                                <p class="number">2</p>
+                                <p class="fourth-block__text">
+                                    Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов
+                                </p>
+                            </div>
+                        </div>
                     </li>
-                    <li class="fourth-block__element fourth-block__element_2 anim-items no-anim-again">
+                    <li class="fourth-block__element fourth-block__element_2 anim-items no-anim-again hidden-mob">
                         <p class="number">2</p>
                         <p class="fourth-block__text">
                             Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов
@@ -146,12 +163,26 @@
                         </p>
                     </li>
                     <li class="fourth-block__element fourth-block__element_4 anim-items no-anim-again">
-                        <p class="number">4</p>
-                        <p class="fourth-block__text">
+                        <p class="number hidden-mob">4</p>
+                        <p class="fourth-block__text hidden-mob">
                             Строительство дворца для турнира
                         </p>
+                        <div class="two-text">
+                            <div class="">
+                                <p class="number ">4</p>
+                                <p class="fourth-block__text ">
+                                    Строительство дворца для турнира
+                                </p>
+                            </div>
+                            <div class="">
+                                <p class="number">5</p>
+                                <p class="fourth-block__text">
+                                    Размещение гаражей для гостевого автотранспорта
+                                </p>
+                            </div>
+                        </div>
                     </li>
-                    <li class="fourth-block__element fourth-block__element_5 anim-items no-anim-again">
+                    <li class="fourth-block__element fourth-block__element_5 anim-items no-anim-again hidden-mob">
                         <p class="number">5</p>
                         <p class="fourth-block__text">
                             Размещение гаражей для гостевого автотранспорта
@@ -171,10 +202,19 @@
                             самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн
                         </p>
                     </li>
-                    <li class="fourth-block__image anim-items no-anim-again">
+                    <li class="fourth-block__image anim-items no-anim-again hidden-mob">
                         <img src="img/airplane.png" alt="Самолет"/>
                     </li>
                 </ul>
+            </div>
+            <div class="fourth-block__row">
+                <button class="fourth-block__swiper-btn prev-stages">
+                    @@include('html/arrow-button.html',{})
+                </button>
+                <div class="bullet-stages"></div>
+                <button class="fourth-block__swiper-btn next-stages">
+                    @@include('html/arrow-button.html',{})
+                </button>
             </div>
         </div>
 
@@ -186,11 +226,11 @@
                 <h2 class="fifth-block__title title">Участники турнира</h2>
                 <div class="fifth-block__buttons">
                     <button class="fifth-block__swiper-btn prev">
-                        <img src="img/button-arrow.svg" alt="">
+                        @@include('html/arrow-button.html',{})
                     </button>
                     <p class="bullet"></p>
                     <button class="fifth-block__swiper-btn next">
-                        <img src="img/button-arrow.svg" alt="">
+                        @@include('html/arrow-button.html',{})
                     </button>
                 </div>
             </div>

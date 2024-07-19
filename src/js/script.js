@@ -1,62 +1,39 @@
-import {swiperConfig} from "./configs-libs/swiper.config.js";
-import {marqueeConfig} from "./configs-libs/marquee.config.js";
-import {scrollToElement} from "./utils/scroll-to-element.js";
-import {isWebp} from "./utils/image-is-webp.js";
-import {animOnScroll} from "./utils/animate.js";
+import { swiperPersonConfig } from './configs-libs/swiperPersonConfig.js';
+import { marqueeConfig } from './configs-libs/marquee.config.js';
+import { scrollToElement } from './utils/scroll-to-element.js';
+import { isWebp } from './utils/image-is-webp.js';
+import { animOnScroll } from './utils/animate.js';
+import { sizeWindowControl } from './utils/size-window-control.js';
 
 isWebp();
 // Бегущая строка
 $('.run-line').marquee(marqueeConfig);
 
 // Свайпер слайдер
-const swiper = new Swiper('.fifth-block__slider', swiperConfig);
-let swiperTable = null
-const swiperBtns = document.querySelector('.fifth-block__buttons')
-
-
+const swiperPerons = new Swiper('.fifth-block__slider', swiperPersonConfig);
+let swiperStages = null;
+const swiperBtns = document.querySelector('.fifth-block__buttons');
 swiperBtns.addEventListener('click', () => {
-    swiper.activeIndex + 1
-})
-
-const tableForthBlock = document.querySelector('.fourth-block__table')
-const tabletContainer = tableForthBlock.querySelector('.fourth-block__table-container')
-const elementsSliderTable = tableForthBlock.querySelectorAll('.fourth-block__element')
-
-if (window.innerWidth <= 992) {
-    tableForthBlock.classList.add('swiper')
-    tabletContainer.classList.add('swiper-wrapper')
-    elementsSliderTable.forEach(item => {
-        item.classList.add('swiper-slide')
-    })
-    // console.log(swiperConfig.slidesPerView)
-    // swiperConfig.params.slidesPerView = 1
-    swiperTable = new Swiper('.fourth-block__table', {})
-}
-
+  swiperPerons.activeIndex + 1;
+});
 window.addEventListener('resize', () => {
-    if (window.innerWidth <= 992) {
-        tableForthBlock.classList.add('swiper')
-    } else {
-        tableForthBlock.classList.remove('swiper')
-    }
-})
+  sizeWindowControl(swiperStages);
+});
+sizeWindowControl(swiperStages);
 
 // Плавный скролл
-const buttonContainerMain = document.querySelector('.main-block__buttons')
-
-buttonContainerMain.addEventListener("click", ({target}) => {
-    const linkArr = target.href.split('/')
-    const link = linkArr[linkArr.length - 1]
-    scrollToElement(link, 100)
+const buttonContainerMain = document.querySelector('.main-block__buttons');
+buttonContainerMain.addEventListener('click', ({ target }) => {
+  const linkArr = target.href.split('/');
+  const link = linkArr[linkArr.length - 1];
+  scrollToElement(link, 100);
 });
-
 
 // Анимация
 let animItems = document.querySelectorAll('.anim-items');
 if (animItems.length > 0) {
-    window.addEventListener('scroll', () => {
-        animOnScroll(animItems)
-    })
-    animOnScroll(animItems)
+  window.addEventListener('scroll', () => {
+    animOnScroll(animItems);
+  });
+  animOnScroll(animItems);
 }
-
