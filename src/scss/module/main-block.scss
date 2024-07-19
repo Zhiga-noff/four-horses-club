@@ -59,6 +59,9 @@
     @media screen and (max-width: 639px) {
       font-size: 2.25rem;
       margin-bottom: 1.5rem;
+
+      transform: translateX(0);
+      opacity: 1;
     }
 
     &.anim {
@@ -89,6 +92,9 @@
     @media screen and (max-width: 639px) {
       text-align: left;
       margin-bottom: 2rem;
+
+      transform: translateX(0);
+      opacity: 1;
     }
 
     &.anim {
@@ -116,6 +122,9 @@
       flex: 1 1 50%;
       @media screen and (max-width: 639px) {
         flex: auto;
+
+        transform: translateY(0);
+        opacity: 1;
       }
     }
 

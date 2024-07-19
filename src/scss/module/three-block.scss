@@ -54,6 +54,9 @@
     @media screen and (max-width: 639px) {
       font-size: 1.75rem;
       margin-bottom: 2.75rem;
+
+      transform: translateX(0);
+      opacity: 1;
     }
 
 
@@ -103,6 +106,9 @@
       align-items: flex-start;
       font-size: 1.25rem;
       gap: .75rem;
+
+      opacity: 1;
+      transform: translateY(0);
     }
 
 

@@ -20,6 +20,9 @@
       display: flex;
       flex-direction: column;
       gap: .75rem;
+
+      transform: translateX(0);
+      opacity: 1;
     }
 
     &.anim {
@@ -203,6 +206,9 @@
       top: 11.375rem;
       right: 0;
       margin: 0 auto;
+
+      transform: translateX(0);
+      opacity: 1;
     }
 
     &.hidden-mob {

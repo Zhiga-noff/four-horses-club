@@ -32,15 +32,20 @@
     transition-duration: 1s;
     transition-delay: 1.3s;
 
+
     .hidden-mob {
       @media screen and (max-width: 639px) {
         display: none;
+
       }
 
     }
 
     @media screen and (max-width: 639px) {
-      font-size: 1.75rem
+      font-size: 1.75rem;
+
+      opacity: 1;
+      transform: translateX(0);
     }
 
     &_mob {
