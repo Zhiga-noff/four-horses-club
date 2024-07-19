@@ -5,6 +5,12 @@ import { isWebp } from './utils/image-is-webp.js';
 import { animOnScroll } from './utils/animate.js';
 import { sizeWindowControl } from './utils/size-window-control.js';
 
+import '../scss/style.scss'
+import { arrowButtonElem, renderRunLine } from './rende-elements';
+
+renderRunLine()
+arrowButtonElem()
+
 isWebp();
 // Бегущая строка
 $('.run-line').marquee(marqueeConfig);
