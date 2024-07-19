@@ -1,0 +1,148 @@
+.fifth-block {
+  padding-bottom: 140px;
+  @media screen and (max-width: 639px) {
+    padding-bottom: 8.75rem;
+  }
+
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition-duration: 1s;
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 639px) {
+      margin-bottom: 2.5rem;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    &.anim {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    &.hidden-desk {
+      display: none;
+      @media screen and (max-width: 639px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .bullet {
+      width: fit-content !important;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .bullet-mob {
+      @media screen and (max-width: 639px) {
+        width: auto !important;
+      }
+    }
+
+    .swiper-pagination-current {
+      opacity: 1;
+    }
+
+    span {
+      opacity: .6;
+    }
+  }
+
+  &__swiper-btn {
+    background-color: inherit;
+
+    &.prev {
+      transform: rotate(180deg);
+    }
+
+
+  }
+
+  // .fifth-block__title
+  &__title {
+
+  }
+
+  // .fifth-block__slider
+  &__slider {
+    opacity: 0;
+    transform: translateY(100%);
+    transition-duration: 1s;
+
+    @media screen and (max-width: 639px) {
+      margin-bottom: 2.5rem;
+
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+    &.anim {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // .fifth-block__element
+  &__element {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // .fifth-block__avatar
+  &__avatar {
+    max-width: 320px;
+    margin-bottom: 28px;
+
+    @media screen and (max-width: 639px) {
+      max-width: 15.25rem;
+      margin-bottom: 1.75rem;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // .fifth-block__name
+  &__name {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 6px;
+
+    @media screen and (max-width: 639px) {
+      font-size: 1.5rem;
+      margin-bottom: .5rem;
+
+    }
+  }
+
+  // .fifth-block__rank
+  &__rank {
+    opacity: .6;
+    text-align: center;
+    margin-bottom: 20px;
+    @media screen and (max-width: 639px) {
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+  }
+
+
+}

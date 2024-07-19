@@ -1,0 +1,52 @@
+@import "../colors";
+
+.run-line {
+  width: 100%; /* the plugin works for responsive layouts so width is not necessary */
+  overflow: hidden;
+  background-color: $red;
+
+  font-size: 22px;
+  font-family: "Merriweather", serif;
+  text-transform: uppercase;
+  line-height: 110%;
+  color: white;
+  padding: 18px 0;
+
+  @media screen and (max-width: 992px) {
+    padding: .9rem;
+    font-size: 2.1rem;
+  }
+
+  @media screen and (max-width: 639px) {
+    padding: .625rem 0;
+    font-size: 1rem;
+  }
+
+  &__element {
+    margin-right: 34px;
+    position: relative;
+
+    @media screen and (max-width: 992px) {
+      margin-right: 1.7rem;
+    }
+
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .circle {
+      height: 6px;
+      width: 6px;
+      background-color: white;
+      border-radius: 50%;
+      margin-left: 12px;
+      position: absolute;
+
+      top: 50%;
+      transform: translateY(-50%);
+
+
+    }
+  }
+}

@@ -1,19 +1,39 @@
-// Функция для конвертации фотографий в формат webp
-function isWebp() {
-	function testWebP(callback) {
-		var webP = new Image();
-		webP.onload = webP.onerror = function () {
-			callback(webP.height == 2);
-		};
-		webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-	}
-	testWebP(function (support) {
-		if (support == true) {
-			document.querySelector('body').classList.add('webp');
-		} else {
-			document.querySelector('body').classList.add('no-webp');
-		}
-	});
-}
+import { swiperPersonConfig } from './configs-libs/swiperPersonConfig.js';
+import { marqueeConfig } from './configs-libs/marquee.config.js';
+import { scrollToElement } from './utils/scroll-to-element.js';
+import { isWebp } from './utils/image-is-webp.js';
+import { animOnScroll } from './utils/animate.js';
+import { sizeWindowControl } from './utils/size-window-control.js';
 
 isWebp();
+// Бегущая строка
+$('.run-line').marquee(marqueeConfig);
+
+// Свайпер слайдер
+const swiperPerons = new Swiper('.fifth-block__slider', swiperPersonConfig);
+let swiperStages = null;
+const swiperBtns = document.querySelector('.fifth-block__buttons');
+swiperBtns.addEventListener('click', () => {
+  swiperPerons.activeIndex + 1;
+});
+window.addEventListener('resize', () => {
+  sizeWindowControl(swiperStages);
+});
+sizeWindowControl(swiperStages);
+
+// Плавный скролл
+const buttonContainerMain = document.querySelector('.main-block__buttons');
+buttonContainerMain.addEventListener('click', ({ target }) => {
+  const linkArr = target.href.split('/');
+  const link = linkArr[linkArr.length - 1];
+  scrollToElement(link, 100);
+});
+
+// Анимация
+let animItems = document.querySelectorAll('.anim-items');
+if (animItems.length > 0) {
+  window.addEventListener('scroll', () => {
+    animOnScroll(animItems);
+  });
+  animOnScroll(animItems);
+}

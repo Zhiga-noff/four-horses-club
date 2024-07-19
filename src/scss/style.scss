@@ -6,18 +6,184 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:wght@400;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 20px;
+  @media screen and (max-width: 992px) {
+    font-size: calc(16px + (20 - 16) * ((100vw - 375px) / (768 - 375)));
+  }
+  @media screen and (max-width: 639px) {
+    font-size: calc(16px + (20 - 16) * ((100vw - 375px) / (768 - 375)));
+  }
+}
+
 body {
   font-family: "Golos Text", sans-serif;
   font-weight: 400;
   font-size: 20px;
+  line-height: 130%;
+  @media screen and (max-width: 992px) {
+    font-size: 1rem;
+  }
 }
 
 .title {
   font-family: "Merriweather", serif;
+  text-transform: uppercase;
+  font-size: 54px;
+  line-height: 110%;
+
+  @media screen and (max-width: 992px) {
+    font-size: 2.7rem;
+  }
+
+  @media screen and (max-width: 639px) {
+    font-size: 2.2rem;
+  }
+
+  .red {
+    color: $red;
+    font-weight: 700;
+  }
 }
 
 .container {
   max-width: 1252px;
+  padding: 0 15px;
   margin: 0 auto;
   color: $text;
+
+  @media screen and (max-width: 992px) {
+    max-width: none;
+    padding: 0 1rem;
+  }
+  @media screen and (max-width: 639px) {
+    max-width: none;
+    padding: 0 1.25rem;
+  }
 }
+
+.button-lg {
+  text-align: center;
+  padding: 16px 45px;
+  border-radius: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+
+  transition-duration: .3s;
+  background-color: $black-btn;
+  border: 2px solid $black-btn;
+  color: white;
+  font-weight: 500;
+
+  @media screen and (max-width: 992px) {
+    font-size: .8rem;
+    padding: .8rem 2.25rem;
+  }
+
+  @media screen and (max-width: 639px) {
+    border: none;
+    font-size: 1rem;
+    padding: 1.125rem 2.625rem;
+  }
+
+  &.stroke {
+    background-color: inherit;
+    color: $black-btn;
+
+    @media screen and (max-width: 992px) {
+      background-color: rgba(255, 255, 255, .9);
+    }
+    @media screen and (max-width: 639px) {
+      background-color: rgba(255, 255, 255, .9);
+    }
+  }
+
+  &:hover {
+    background-color: $yellow;
+    border: 2px solid $yellow;
+    color: $black-btn;
+    @media screen and (max-width: 639px) {
+      border: none;
+    }
+  }
+}
+
+.button-sm {
+  padding: 10px;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 30px;
+  border: 1px solid $blue;
+  color: $blue;
+  font-weight: 500;
+  transition-duration: .3s;
+
+  @media screen and (max-width: 992px) {
+    font-size: .8rem;
+    padding: .5rem;
+  }
+
+  @media screen and (max-width: 639px) {
+    font-size: 1rem;
+    padding: .75rem;
+  }
+
+  &:hover {
+    color: white;
+    background-color: $blue;
+  }
+}
+
+.hidden-mob {
+  @media screen and (max-width: 639px) {
+    display: none !important;
+  }
+}
+
+
+.arrow-btn {
+  circle {
+
+    transition-duration: .3s;
+  }
+
+  &:hover {
+    circle {
+      fill: $yellow;
+    }
+  }
+}
+
+
+footer {
+  padding: 40px 0 72px;
+  background-color: $beige;
+
+  @media screen and (max-width: 992px) {
+    padding: 2rem 0 3.6rem;
+  }
+
+  p {
+    opacity: .6;
+    font-size: 16px;
+    @media screen and (max-width: 992px) {
+      font-size: .8rem;
+    }
+    @media screen and (max-width: 639px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Модули
+@import "module/main-block";
+@import "module/running-line";
+@import "module/second-block";
+@import "module/three-block";
+@import "module/fourth-block";
+@import "module/fifth-block";

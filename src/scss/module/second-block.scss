@@ -1,0 +1,77 @@
+@import "../colors";
+
+.second-block {
+  padding-top: 80px;
+  padding-bottom: 36px;
+
+
+  @media screen and (max-width: 992px) {
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+  }
+  // .second-block__row
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1.5rem;
+    }
+  }
+
+  // .second-block__title
+  &__title {
+    max-width: 764px;
+    font-size: 36px;
+    line-height: 135%;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition-duration: 1s;
+    transition-delay: 1.3s;
+
+
+    .hidden-mob {
+      @media screen and (max-width: 992px) {
+        display: none;
+
+      }
+
+    }
+
+    @media screen and (max-width: 992px) {
+      font-size: 1.75rem;
+
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &_mob {
+      display: none;
+      @media screen and (max-width: 992px) {
+        display: block;
+      }
+    }
+
+    &.anim {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  // .second-block__image
+  &__image {
+    flex: 0 0 394px;
+
+    @media screen and (max-width: 992px) {
+      flex: 1 1 auto;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
